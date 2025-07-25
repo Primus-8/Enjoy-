@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Cloud Display</title>
+  <meta charset="UTF-8" />
+  <title>Cloud Animation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <style>
     body {
       margin: 0;
-      background: #87CEEB; /* Sky blue */
+      background: linear-gradient(to top, #87CEEB, #ffffff);
+      overflow: hidden;
       height: 100vh;
     }
 
     .cloud {
-      position: relative;
-      width: 200px;
+      position: absolute;
+      top: 100px;
+      left: -300px;
+      width: 150px;
       height: 60px;
-      background: white;
-      border-radius: 100px;
-      margin: 100px auto;
+      background: #fff;
+      border-radius: 50px;
+      animation: move 25s linear infinite;
     }
 
-    .cloud::before,
-    .cloud::after {
+    .cloud::before, .cloud::after {
       content: "";
       position: absolute;
-      background: white;
+      background: #fff;
       border-radius: 50%;
     }
 
     .cloud::before {
-      width: 100px;
-      height: 100px;
-      top: -50px;
+      width: 80px;
+      height: 80px;
+      top: -20px;
       left: 10px;
     }
 
     .cloud::after {
-      width: 80px;
-      height: 80px;
-      top: -40px;
-      left: 90px;
+      width: 60px;
+      height: 60px;
+      top: -15px;
+      left: 70px;
+    }
+
+    @keyframes move {
+      0% {
+        left: -300px;
+      }
+      100% {
+        left: 100%;
+      }
     }
   </style>
 </head>
 <body>
+
   <div class="cloud"></div>
+
 </body>
 </html>
