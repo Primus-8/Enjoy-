@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Animated Cloud</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to top, #87ceeb, #ffffff);
+      overflow: hidden;
+    }
+
+    .cloud {
+      width: 200px;
+      height: 60px;
+      background: #fff;
+      border-radius: 100px;
+      position: absolute;
+      top: 100px;
+      left: -250px;
+      animation: moveCloud 30s linear infinite;
+      box-shadow: 60px 0 #fff, 120px 0 #fff;
+    }
+
+    @keyframes moveCloud {
+      0% {
+        left: -250px;
+      }
+      100% {
+        left: 110%;
+      }
+    }
+
+    .cloud::before, .cloud::after {
+      content: '';
+      position: absolute;
+      background: #fff;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 100px;
+      height: 100px;
+      top: -40px;
+      left: 20px;
+    }
+
+    .cloud::after {
+      width: 80px;
+      height: 80px;
+      top: -30px;
+      left: 90px;
+    }
+  </style>
+</head>
+<body>
+  <div class="cloud"></div>
+</body>
+</html>
