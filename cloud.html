@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Cloud Animation</title>
+  <style>
+    body {
+      margin: 0;
+      background: skyblue;
+      overflow: hidden;
+      height: 100vh;
+    }
+
+    .cloud {
+      position: absolute;
+      top: 100px;
+      left: -200px;
+      width: 120px;
+      height: 60px;
+      background: white;
+      border-radius: 60px;
+      animation: cloudMove 20s linear infinite;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: "";
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 80px;
+      height: 80px;
+      top: -40px;
+      left: 10px;
+    }
+
+    .cloud::after {
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      left: 60px;
+    }
+
+    @keyframes cloudMove {
+      0% {
+        left: -200px;
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="cloud"></div>
+</body>
+</html>
