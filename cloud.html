@@ -1,25 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Simple Cloud Animation</title>
+  <meta charset="UTF-8">
+  <title>Cloud Display</title>
   <style>
     body {
       margin: 0;
-      background: skyblue;
-      overflow: hidden;
+      background: #87CEEB; /* Sky blue */
       height: 100vh;
     }
 
     .cloud {
-      position: absolute;
-      top: 100px;
-      left: -200px;
-      width: 120px;
+      position: relative;
+      width: 200px;
       height: 60px;
       background: white;
-      border-radius: 60px;
-      animation: cloudMove 20s linear infinite;
+      border-radius: 100px;
+      margin: 100px auto;
     }
 
     .cloud::before,
@@ -31,26 +28,17 @@
     }
 
     .cloud::before {
-      width: 80px;
-      height: 80px;
-      top: -40px;
+      width: 100px;
+      height: 100px;
+      top: -50px;
       left: 10px;
     }
 
     .cloud::after {
-      width: 60px;
-      height: 60px;
-      top: -30px;
-      left: 60px;
-    }
-
-    @keyframes cloudMove {
-      0% {
-        left: -200px;
-      }
-      100% {
-        left: 100%;
-      }
+      width: 80px;
+      height: 80px;
+      top: -40px;
+      left: 90px;
     }
   </style>
 </head>
